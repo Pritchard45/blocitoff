@@ -1,6 +1,19 @@
 import React, { Component } from 'react';
+import * as firebase from 'firebase';
 import logo from './logo.svg';
 import './App.css';
+
+// Initialize Firebase
+var config = {
+  apiKey: "AIzaSyDotim8OSLeLMsF69OWkt3UPe3DjJ8sIZU",
+  authDomain: "blocitoff-ec6cd.firebaseapp.com",
+  databaseURL: "https://blocitoff-ec6cd.firebaseio.com",
+  projectId: "blocitoff-ec6cd",
+  storageBucket: "blocitoff-ec6cd.appspot.com",
+  messagingSenderId: "338431175238"
+};
+firebase.initializeApp(config);
+
 
 class App extends Component {
   render() {
