@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-import * as firebase from 'firebase';
-import logo from './logo.svg';
 import './App.css';
+import TaskList from './components/TaskList.js';
+import * as firebase from 'firebase';
+
 
 // Initialize Firebase
-var config = {
+const config = {
   apiKey: "AIzaSyDotim8OSLeLMsF69OWkt3UPe3DjJ8sIZU",
   authDomain: "blocitoff-ec6cd.firebaseapp.com",
   databaseURL: "https://blocitoff-ec6cd.firebaseio.com",
@@ -16,23 +17,21 @@ firebase.initializeApp(config);
 
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+
+    };
+  };
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <header className="App-header">"Blocitoff!"</header>
+        <aside>
+          <TaskList
+            firebase = {firebase}
+          />
+        </aside>
       </div>
     );
   }
