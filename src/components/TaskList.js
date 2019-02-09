@@ -48,23 +48,24 @@ class TaskList extends Component {
 
   render() {
     return (
-      <section>
-        <h1> Active Tasks </h1>
-        { this.state.tasks.map( task =>
-          <li key = {task.key} >
-            {task.taskId}
-          </li>
-        )}
+        <section>
+          <h1> Active Tasks </h1>
+          { this.state.tasks.map( task =>
+            <li key = {task.key} >
+              {task.taskId}
+            </li>
+          )}
 
-        <form onSubmit={ (e) => this.handleSubmit(e)}>
-          <input type= "text" value= {this.state.newTaskId} onChange={ (e) => this.handleTaskChange(e) }/>
-          <input type = "submit" />
+          <form onSubmit={ (e) => this.handleSubmit(e)}>
+            <input type= "text" value= {this.state.newTaskId} onChange={ (e) => this.handleTaskChange(e) }/>
+            <input type = "submit" />
 
-        </form>
-      </section>
+          </form>
+        </section>
 
     );
   }
 
 }
+
 export default TaskList;

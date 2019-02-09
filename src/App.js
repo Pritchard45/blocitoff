@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+import { Route, Link } from 'react-router-dom';
 import './App.css';
 import TaskList from './components/TaskList.js';
+import Complete from './components/Complete.js';
 import * as firebase from 'firebase';
 
 
@@ -20,13 +22,18 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
+    activeList: null
 
     };
   };
+
+  
+
   render() {
     return (
       <div className="App">
         <header className="App-header">"Blocitoff!"</header>
+
         <aside>
           <TaskList
             firebase = {firebase}
